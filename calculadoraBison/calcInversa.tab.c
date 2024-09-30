@@ -1,7 +1,7 @@
 #define YY_parse_h_included
 /*#define YY_USE_CLASS 
 */
-/*  A Bison++ parser, made from calc.y  */
+/*  A Bison++ parser, made from calcInversa.y  */
 
  /* with Bison++ version bison++ Version 1.21.9-1, adapted from GNU bison by coetmeur@icdc.fr
 Maintained by Magnus Ekdahl <magnus@debian.org>
@@ -98,20 +98,20 @@ Maintained by Magnus Ekdahl <magnus@debian.org>
 #define YYBISON 1  
 
  #line 88 "/usr/share/bison++/bison.cc"
-#line 1 "calc.y"
+#line 1 "calcInversa.y"
 
+#define CALC_INVERSA
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>  
+#include <math.h>
 
 void yyerror(const char *s);
 int yylex(void);
-void print_value(float value);  
+void print_value(float value);
 
-
-#line 12 "calc.y"
+#line 12 "calcInversa.y"
 typedef union {
-    float val; 
+    float val;
 } yy_parse_stype;
 #define YY_parse_STYPE yy_parse_stype
 #ifndef YY_USE_CLASS
@@ -459,7 +459,7 @@ YY_parse_CONSTRUCTOR_CODE;
  #line 352 "/usr/share/bison++/bison.cc"
 
 
-#define	YYFINAL		29
+#define	YYFINAL		26
 #define	YYFLAG		-32768
 #define	YYNTBASE	12
 
@@ -497,24 +497,23 @@ static const char yytranslate[] = {     0,
 
 #if YY_parse_DEBUG != 0
 static const short yyprhs[] = {     0,
-     0,     1,     5,     7,    11,    15,    17,    21,    25,    27,
-    30,    33,    37,    41
+     0,     1,     5,     7,    11,    15,    19,    23,    25,    29,
+    31,    34,    37
 };
 
 static const short yyrhs[] = {    -1,
     12,    13,     9,     0,    14,     0,    13,     4,    14,     0,
-    13,     5,    14,     0,    15,     0,    14,     6,    15,     0,
-    14,     7,    15,     0,     3,     0,     4,     3,     0,     5,
-     3,     0,     8,    15,     8,     0,    10,    13,    11,     0,
-     5,    10,    13,    11,     0
+    13,     5,    14,     0,    13,     6,    14,     0,    13,     7,
+    14,     0,    15,     0,    10,    13,    11,     0,     3,     0,
+     4,     3,     0,     5,     3,     0,     8,    15,     8,     0
 };
 
 #endif
 
 #if (YY_parse_DEBUG != 0) || defined(YY_parse_ERROR_VERBOSE) 
 static const short yyrline[] = { 0,
-    24,    25,    28,    30,    31,    34,    36,    37,    49,    51,
-    52,    53,    54,    55
+    29,    30,    33,    35,    36,    37,    38,    48,    50,    53,
+    55,    56,    57
 };
 
 static const char * const yytname[] = {   "$","error","$illegal.","NUMBER","ADD",
@@ -524,19 +523,19 @@ static const char * const yytname[] = {   "$","error","$illegal.","NUMBER","ADD"
 #endif
 
 static const short yyr1[] = {     0,
-    12,    12,    13,    13,    13,    14,    14,    14,    15,    15,
-    15,    15,    15,    15
+    12,    12,    13,    13,    13,    13,    13,    14,    14,    15,
+    15,    15,    15
 };
 
 static const short yyr2[] = {     0,
-     0,     3,     1,     3,     3,     1,     3,     3,     1,     2,
-     2,     3,     3,     4
+     0,     3,     1,     3,     3,     3,     3,     1,     3,     1,
+     2,     2,     3
 };
 
 static const short yydefact[] = {     1,
-     0,     9,     0,     0,     0,     0,     0,     3,     6,    10,
-    11,     0,     0,     0,     0,     0,     2,     0,     0,     0,
-    12,    13,     4,     5,     7,     8,    14,     0,     0
+     0,    10,     0,     0,     0,     0,     0,     3,     8,    11,
+    12,     0,     0,     0,     0,     0,     0,     2,    13,     9,
+     4,     5,     6,     7,     0,     0
 };
 
 static const short yydefgoto[] = {     1,
@@ -544,31 +543,33 @@ static const short yydefgoto[] = {     1,
 };
 
 static const short yypact[] = {-32768,
-     1,-32768,     4,     0,    12,    12,    22,    26,-32768,-32768,
--32768,    12,    27,    14,    12,    12,-32768,    12,    12,    19,
--32768,-32768,    26,    26,-32768,-32768,-32768,    21,-32768
+     0,-32768,    -2,    -1,    30,     8,    23,-32768,-32768,-32768,
+-32768,     1,    15,     8,     8,     8,     8,-32768,-32768,-32768,
+-32768,-32768,-32768,-32768,     6,-32768
 };
 
 static const short yypgoto[] = {-32768,
-    -4,    13,    -5
+     9,    25,     2
 };
 
 
-#define	YYLAST		35
+#define	YYLAST		42
 
 
-static const short yytable[] = {    13,
-    28,    14,    11,     2,     3,     4,    10,    20,     5,    12,
-     6,     0,    25,    26,     2,     3,     4,    15,    16,     5,
-    29,     6,    15,    16,    22,    15,    16,    23,    24,    27,
-    17,    18,    19,     0,    21
+static const short yytable[] = {    25,
+    10,    11,     2,     3,     4,    26,    12,     5,    19,     6,
+     2,     3,     4,     0,    13,     5,     0,     6,    14,    15,
+    16,    17,     0,     0,     0,    20,    14,    15,    16,    17,
+     0,    18,     2,     3,     4,     0,     0,     5,    21,    22,
+    23,    24
 };
 
-static const short yycheck[] = {     5,
-     0,     6,     3,     3,     4,     5,     3,    12,     8,    10,
-    10,    -1,    18,    19,     3,     4,     5,     4,     5,     8,
-     0,    10,     4,     5,    11,     4,     5,    15,    16,    11,
-     9,     6,     7,    -1,     8
+static const short yycheck[] = {     0,
+     3,     3,     3,     4,     5,     0,     5,     8,     8,    10,
+     3,     4,     5,    -1,     6,     8,    -1,    10,     4,     5,
+     6,     7,    -1,    -1,    -1,    11,     4,     5,     6,     7,
+    -1,     9,     3,     4,     5,    -1,    -1,     8,    14,    15,
+    16,    17
 };
 
 #line 352 "/usr/share/bison++/bison.cc"
@@ -1065,65 +1066,59 @@ YYLABEL(yyreduce)
   switch (yyn) {
 
 case 2:
-#line 25 "calc.y"
+#line 30 "calcInversa.y"
 { print_value(yyvsp[-1].val); ;
     break;}
 case 3:
-#line 29 "calc.y"
+#line 34 "calcInversa.y"
 { yyval.val = yyvsp[0].val; ;
     break;}
 case 4:
-#line 30 "calc.y"
-{ yyval.val = yyvsp[-2].val + yyvsp[0].val; printf("3er valor"); print_value(yyvsp[0].val); ;
+#line 35 "calcInversa.y"
+{ yyval.val = yyvsp[-2].val + yyvsp[0].val; ;
     break;}
 case 5:
-#line 31 "calc.y"
-{ yyval.val = yyvsp[-2].val - yyvsp[0].val; printf("3er valor"); print_value(yyvsp[0].val); ;
+#line 36 "calcInversa.y"
+{ yyval.val = yyvsp[-2].val - yyvsp[0].val; ;
     break;}
 case 6:
-#line 35 "calc.y"
-{ yyval.val = yyvsp[0].val; ;
+#line 37 "calcInversa.y"
+{ yyval.val = yyvsp[-2].val * yyvsp[0].val; ;
     break;}
 case 7:
-#line 36 "calc.y"
-{ yyval.val = yyvsp[-2].val * yyvsp[0].val; printf("3er valor"); print_value(yyvsp[0].val); ;
-    break;}
-case 8:
-#line 37 "calc.y"
-{ 
+#line 38 "calcInversa.y"
+{
         if (yyvsp[0].val == 0) {
-            printf("Error: División por cero\n");
+            yyerror("División por cero");
             yyval.val = 0;
         } else {
-            yyval.val = yyvsp[-2].val / yyvsp[0].val; 
+            yyval.val = yyvsp[-2].val / yyvsp[0].val;
         }
-        printf("3er valor"); 
-        print_value(yyvsp[0].val);
     ;
     break;}
-case 9:
-#line 50 "calc.y"
+case 8:
+#line 49 "calcInversa.y"
 { yyval.val = yyvsp[0].val; ;
     break;}
-case 10:
-#line 51 "calc.y"
-{ yyval.val = +yyvsp[0].val; ;
-    break;}
-case 11:
-#line 52 "calc.y"
-{ yyval.val = -yyvsp[0].val; ;
-    break;}
-case 12:
-#line 53 "calc.y"
-{ yyval.val = yyvsp[-1].val >= 0 ? yyvsp[-1].val : -yyvsp[-1].val; printf("No hay 3er valor\n"); ;
-    break;}
-case 13:
-#line 54 "calc.y"
+case 9:
+#line 50 "calcInversa.y"
 { yyval.val = yyvsp[-1].val; ;
     break;}
-case 14:
-#line 55 "calc.y"
-{ yyval.val = -yyvsp[-1].val; printf("3er valor");  print_value(yyvsp[-1].val); ;
+case 10:
+#line 54 "calcInversa.y"
+{ yyval.val = yyvsp[0].val; ;
+    break;}
+case 11:
+#line 55 "calcInversa.y"
+{ yyval.val = +yyvsp[0].val; ;
+    break;}
+case 12:
+#line 56 "calcInversa.y"
+{ yyval.val = -yyvsp[0].val; ;
+    break;}
+case 13:
+#line 57 "calcInversa.y"
+{ yyval.val = yyvsp[-1].val >= 0 ? yyvsp[-1].val : -yyvsp[-1].val; ;
     break;}
 }
 
@@ -1329,7 +1324,7 @@ YYLABEL(yyerrhandle)
 /* END */
 
  #line 1038 "/usr/share/bison++/bison.cc"
-#line 58 "calc.y"
+#line 60 "calcInversa.y"
 
 
 void print_value(float value) {

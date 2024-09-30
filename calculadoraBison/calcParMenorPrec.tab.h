@@ -13,9 +13,9 @@
 
  #line 8 "/usr/share/bison++/bison.h"
 
-#line 12 "calc.y"
+#line 11 "calcParMenorPrec.y"
 typedef union {
-    float val; 
+    float val;
 } yy_parse_stype;
 #define YY_parse_STYPE yy_parse_stype
 #ifndef YY_USE_CLASS
